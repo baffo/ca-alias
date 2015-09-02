@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /* Admin Author Alias Box */
 add_action('add_meta_boxes', 'ca_add_alias_box');
 function ca_add_alias_box() {
-    $screens = array('post');
+    $screens = array('post', 'page');
     foreach ($screens as $screen) {
         add_meta_box(
             'ca_box_id',
@@ -28,9 +28,10 @@ function ca_add_alias_box() {
 }
 
 function ca_alias_meta_box($post) {
+    $author = get_post_meta($post->ID, 'ca_author_alias', true);
 ?>
    <label for="ca_author_alias">Set the Display name of Post author</label>
-   <input type="text" name="ca_author_alias" id="ca_author_alias" class="postbox" placeholder="John Doe" />
+   <input type="text" name="ca_author_alias" id="ca_author_alias" class="postbox" value="<?php if ($author != '') { echo $author; } ?>" placeholder="John Doe" />
 <?php
 }
 
