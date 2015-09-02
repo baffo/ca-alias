@@ -36,7 +36,7 @@ function ca_alias_meta_box($post) {
 
 /* Save Author Alias data */
 add_action('save_post', 'ca_save_author_meta');
-function ca_save_author_meta($post_id, $post, $update) {
+function ca_save_author_meta($post_id) {
 	if (array_key_exists('ca_author_alias', $_POST) ) {
         update_post_meta( $post_id,
            'ca_author_alias',
