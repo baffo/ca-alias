@@ -1,7 +1,7 @@
 <?php
 /**
 Plugin Name: Change Author Alias
-Plugin URI: http://timerecursion.com
+Plugin URI: https://github.com/baffo/ca-alias
 Description: Change Author Alias to a custom alias name when publishing a post. Allows you to specify a custom author name for each post.
 Version: 1.0
 Author: Primož Bevk
