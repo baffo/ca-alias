@@ -40,7 +40,7 @@ function ca_save_author_meta($post_id, $post, $update) {
 	if (array_key_exists('ca_author_alias', $_POST) ) {
         update_post_meta( $post_id,
            'ca_author_alias',
-            sanitize_text_field($_POST['ca_author_alias']);
+            sanitize_text_field($_POST['ca_author_alias'])
         );
     }
 }
